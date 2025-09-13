@@ -1,7 +1,10 @@
 let boxes = document.querySelectorAll(".box");
+let button = document.querySelector(".button");
 let count = 0;
 let gameOver = false;
 
+let cntx = 0;
+let cnto = 0;
 
 let winningCombination = [
     [0, 1, 2],
@@ -35,12 +38,12 @@ boxes.forEach((box, index) => {
                 board[index] = "O";
                 clickedBox.innerText = "O";
             }
-            if (winner()) {
-                let cntx = 0;
-                let cnto = 0;
-                let player = winner();
+            let player = winner();
+            if (player) {
                 gameOver = true;
-                if (player == "0") {
+                setTimeout(restart,1500);
+
+                if (player == "O") {
                     cnto++;
                     let scoreO = document.getElementById("score-O");
                     scoreO.innerText = cnto;
@@ -49,6 +52,10 @@ boxes.forEach((box, index) => {
                     let scoreX = document.getElementById("score-X");
                     scoreX.innerText = cntx;
                 }
+            }else if(count === 9) {
+                alert("Match Draw");
+                gameOver = true;
+                setTimeout(restart,1500);
             }
         }
     });
@@ -64,3 +71,14 @@ function winner() {
     return false;
 
 }
+
+function restart(){
+    board = ["","","","","","","","",""];
+    boxes.forEach(box => box.innerText="");
+    count=0;
+    gameOver=false;
+}
+
+button.addEventListener("click",function(){
+    location.reload();
+});
