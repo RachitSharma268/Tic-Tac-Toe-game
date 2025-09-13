@@ -1,0 +1,123 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+body{
+    background-color: #B0302C;
+}
+
+.nav-bar{
+    height: 65px;
+    width: 35%;
+    margin: 39px auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #e7710b;
+    border-radius: 1rem;
+}
+
+.nav-option{
+    display: flex;
+    gap: 89px;
+}
+
+.nav-option a{
+    text-decoration: none;
+    color: white;
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.game-area {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem; /* space between player box and board */
+    margin-top: 2rem;
+}
+
+.player-box {
+    height: 7rem;
+    width: 6rem;
+    background-color: #e7710b;
+    border-radius: 2.5% 20% 20% 20% ;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: black;
+    font-weight: 700;
+    font-size: 1rem;
+    line-height: 1.5rem;
+    padding: 0.5rem;
+    margin: 1rem;
+}
+
+
+.player-1{
+    height: 3rem;
+    width: 5rem;
+    background-color: #e7710b;
+}
+
+.player-2{
+    height: 3rem;
+    width: 5rem;
+    background-color: #e7710b;
+    border-radius: 1rem;  
+}
+
+.container{
+    height: 23rem;
+    width: 26rem;
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    text-align: center;
+    background-color: #D9A27E;
+    border-radius: 3rem;
+    margin: auto;
+    
+}
+
+.box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 3rem;
+    font-weight: 600;
+    font-family: "Times New Roman", Times, serif;
+    background-color: #8B3E1E;
+    border: 2px solid gray;
+    height: 6rem;
+    width: 6rem;
+    margin: 11px;
+    border-radius: 24px;
+}
+
+.button{
+    display: block;
+    margin: 13px auto;
+    height: 42px;
+    width: 150px;
+    border-radius: 9999px;
+    background-color: #e7710b;
+    border: none;
+    color: white;
+    font-weight: 700;
+    font-size: large;
+    cursor: pointer;
+}
+
+.X-class{
+    color: white;
+}
+
+.O-class{
+    color: white;
+}
+
